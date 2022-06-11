@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = new Server(server,
     {
     cors: {
-        origin: "http://localhost:3000"
+        origins: "http://localhost:3000 http://rti-react.local:*"
     }
 });
 
@@ -38,6 +38,7 @@ app.post('/dataStateUpdate/:dataEntity', (req, res) => {
 io.on('connection', (socket) => {
     console.log('Dashboard connected.');
 });
+
 
 server.listen(3001, () => {
     console.log('listening on *:3001');
