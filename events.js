@@ -1,0 +1,5 @@
+
+
+module.exports = {
+    DATA_ENTITY_STATE_CHANGE_EVENT:"DATA_ENTITY_STATE_CHANGE_EVENT"
+}
