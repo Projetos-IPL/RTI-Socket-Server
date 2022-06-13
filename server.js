@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require("cors");
 const http = require('http');
 const { Server } = require("socket.io");
-const {DATA_ENTITY_STATE_CHANGE_EVENT} = require("./events");
+const { DATA_ENTITY_STATE_CHANGE_EVENT } = require("./events");
 const DATA_ENTITIES = require("./dataEntities");
 
 const app = express();
@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = new Server(server,
     {
     cors: {
-        origins: "http://localhost:3000 http://rti-react.local:*"
+        origins: "http://localhost:3000"
     }
 });
 
