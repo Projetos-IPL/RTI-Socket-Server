@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/dataStateUpdate/:dataEntity', (req, res) => {
-
     const dataEntity = req.params['dataEntity'];
 
     if (!DATA_ENTITIES[dataEntity]) {
